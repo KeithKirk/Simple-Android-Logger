@@ -1,4 +1,4 @@
-package com.kirk.gm.utility.logging;
+package com.kirk.simple_android_logger;
 
 /**
  * Created by Keith on 29/11/14.
