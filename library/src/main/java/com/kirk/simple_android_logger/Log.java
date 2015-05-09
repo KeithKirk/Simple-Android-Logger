@@ -2,6 +2,10 @@ package com.kirk.simple_android_logger;
 
 /**
  * Created by Keith on 09/05/15.
+ *
+ * An object representing a Log.
+ *
+ * Uses a builder pattern for immutability.
  */
 public class Log {
 

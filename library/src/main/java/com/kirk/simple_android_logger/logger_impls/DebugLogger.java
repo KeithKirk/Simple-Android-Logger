@@ -8,6 +8,9 @@ import java.util.List;
 
 /**
  * Created by Keith on 09/05/15.
+ *
+ * A Logger implementation which records all logs passed to it in  List for later analysis to allow
+ * automated unit testing to examine logging facilities for correctness.
  */
 public class DebugLogger implements Logger {
 
