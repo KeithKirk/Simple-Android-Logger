@@ -2,6 +2,10 @@ package com.kirk.simple_android_logger;
 
 import android.content.Context;
 
+import com.kirk.simple_android_logger.logger_impls.DebugLogger;
+import com.kirk.simple_android_logger.logger_impls.LogcatLogger;
+import com.kirk.simple_android_logger.logger_impls.NullLogger;
+
 /**
  * Created by Keith on 29/11/14.
  *

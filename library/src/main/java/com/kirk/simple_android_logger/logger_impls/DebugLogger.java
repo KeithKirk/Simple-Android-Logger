@@ -1,4 +1,7 @@
-package com.kirk.simple_android_logger;
+package com.kirk.simple_android_logger.logger_impls;
+
+import com.kirk.simple_android_logger.Log;
+import com.kirk.simple_android_logger.Logger;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -6,7 +9,7 @@ import java.util.List;
 /**
  * Created by Keith on 09/05/15.
  */
-public class DebugLogger implements Logger{
+public class DebugLogger implements Logger {
 
     private List<Log> mLogList;
 

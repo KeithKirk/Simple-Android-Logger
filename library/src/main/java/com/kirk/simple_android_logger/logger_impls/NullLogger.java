@@ -1,4 +1,6 @@
-package com.kirk.simple_android_logger;
+package com.kirk.simple_android_logger.logger_impls;
+
+import com.kirk.simple_android_logger.Logger;
 
 /**
  * Created by Keith on 29/11/14.
