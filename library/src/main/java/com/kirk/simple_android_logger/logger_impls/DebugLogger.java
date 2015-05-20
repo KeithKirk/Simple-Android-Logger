@@ -3,8 +3,10 @@ package com.kirk.simple_android_logger.logger_impls;
 import com.kirk.simple_android_logger.Log;
 import com.kirk.simple_android_logger.Logger;
 
+import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Set;
 
 /**
  * Created by Keith on 09/05/15.
@@ -35,7 +37,17 @@ public class DebugLogger implements Logger {
         log(object, mode, String.format(format, args));
     }
 
-    public List<Log> getLogs(){
+    public List<Log> getLogs() {
         return this.mLogList;
+    }
+
+    public List<Log> getFilteredLogs(Set<String> filters) {
+        List<Log> returnList = new LinkedList<Log>();
+        for (Log currentLog: this.mLogList){
+            if (filters.contains(currentLog.getMode())){
+                returnList.add(currentLog);
+            }
+        }
+        return returnList;
     }
 }
