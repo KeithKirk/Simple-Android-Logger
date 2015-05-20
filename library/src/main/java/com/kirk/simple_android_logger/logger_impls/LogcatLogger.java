@@ -19,7 +19,7 @@ import com.kirk.simple_android_logger.Logger;
 public class LogcatLogger implements Logger {
 
     @Override
-    public void log(String message, String mode, Object object){
+    public void log(Object object, String mode, String message){
         String tag = object.getClass().getSimpleName();
         if (mode.equals("v")){
             Log.v(tag, message);
@@ -36,5 +36,10 @@ public class LogcatLogger implements Logger {
         if (mode.equals("e")){
             Log.e(tag, message);
         }
+    }
+
+    @Override
+    public void logFormat(Object object, String mode, String format, Object... args){
+        log(object, mode, String.format(format, args));
     }
 }

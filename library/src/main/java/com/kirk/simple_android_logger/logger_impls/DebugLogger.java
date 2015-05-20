@@ -20,13 +20,19 @@ public class DebugLogger implements Logger {
         mLogList = new LinkedList<Log>();
     }
 
-    public void log(String message, String mode, Object object){
+    @Override
+    public void log(Object object, String mode, String message){
         Log log = new Log.Builder()
                 .message(message)
                 .mode(mode)
                 .origin(object.getClass().getSimpleName())
                 .build();
         mLogList.add(log);
+    }
+
+    @Override
+    public void logFormat(Object object, String mode, String format, Object... args){
+        log(object, mode, String.format(format, args));
     }
 
     public List<Log> getLogs(){

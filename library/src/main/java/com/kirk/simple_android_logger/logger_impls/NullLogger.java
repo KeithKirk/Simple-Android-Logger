@@ -10,7 +10,12 @@ import com.kirk.simple_android_logger.Logger;
 public class NullLogger implements Logger {
 
     @Override
-    public void log(String message, String mode, Object object){
+    public void log(Object object, String mode, String message){
+
+    }
+
+    @Override
+    public void logFormat(Object object, String mode, String format, Object... args){
 
     }
 }
